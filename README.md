@@ -9,7 +9,7 @@ If you would like to make sure Neovim only updates when you want it to than I re
 **NOTE** Verify the required [build prerequisites](https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites) for your system.
 
 ```sh
-git clone https://github.com/eeshwr/nvim_lua.git
+git clone https://github.com/neovim/neovim.git
 cd neovim
 git checkout release-0.8
 make CMAKE_BUILD_TYPE=Release
