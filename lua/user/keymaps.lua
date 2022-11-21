@@ -6,6 +6,8 @@ local opts = { silent = true }
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
+---------
+--,wq
 
 -- Modes
 --   normal_mode = "n",
@@ -43,8 +45,17 @@ keymap("v", "p", '"_dP', opts)
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+keymap("i", "<leader>e", "<ESC>", opts)
 
+--save files 
+keymap("n", "<leader>w", ":w<CR>", opts)
+--quit the nvim
+keymap("n", "<leader>q", ":q<CR>", opts)
+--save and close the file
+keymap("n", "<leader>wq", ":wq<CR>", opts)
+
+-- close without saving the file
+keymap("n", "<leader>w", ":w<CR>", opts)
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
@@ -53,7 +64,7 @@ keymap("v", ">", ">gv", opts)
 -- Plugins --
 
 -- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>ne", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
